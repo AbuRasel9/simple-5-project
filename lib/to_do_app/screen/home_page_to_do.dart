@@ -73,6 +73,7 @@ class _HomePageToDoState extends State<HomePageToDo> {
 
   }
 
+
   //delete task
    deleteTask(index){
     setState(() {

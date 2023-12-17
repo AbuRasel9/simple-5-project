@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:simple_project/bar_code/qr_code_scanner/qr_code_scanner.dart';
+import 'package:simple_project/capture_image/capture_image.dart';
+import 'package:simple_project/google_map/google_map.dart';
+import 'package:simple_project/json_parse/screen.dart';
 import 'package:simple_project/roll_dice/roll_dice.dart';
 import 'package:simple_project/to_do_app/screen/home_page_to_do.dart';
 
@@ -55,6 +59,60 @@ class _MainScreenState extends State<MainScreen> {
               ),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const RollDice()));
+              },
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+
+            //Capture image and save image in gallery
+
+            ListTile(
+              title: const Text(
+                "Capture Image",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+              ),
+              trailing: const Icon(
+                Icons.forward,
+                color: Colors.black,
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const CaptureImage()));
+              },
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ListTile(
+              title: const Text(
+                "Json Parse",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+              ),
+              trailing: const Icon(
+                Icons.forward,
+                color: Colors.black,
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const MainScreenJsonParse()));
+              },
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ListTile(
+              title: const Text(
+                "QrCode/BarCodeScanner",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+              ),
+              trailing: const Icon(
+                Icons.forward,
+                color: Colors.black,
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Scanner()));
               },
             ),
             const SizedBox(

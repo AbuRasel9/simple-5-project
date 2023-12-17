@@ -23,7 +23,13 @@ class ToDoDatabase{
   void updateDatabase(){
     _myBox.put("ToDoList", toDoList);
 
+  }  //update database
+  void updateDatabaseText(){
+    _myBox.put("ToDoList", toDoList);
+
   }
+
+
 
 
 }
